@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Current Inventory</h2>
+{% if inventory %}
+    <div class="row">
+        {% for item in inventory %}
+        <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div class="card bg-secondary text-light">
+                <img src="/static/images/{{ item.image }}" class="card-img-top" alt="{{ item.name }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ item.name }}</h5>
+                    <p class="card-text">{{  item.description }}</p>
+                    <p><strong>Usage:</strong> {{ item.usage }}</p>
+                    <a href="{{ url_for('remove_item', item_id=item.id) }}" class="btn btn-danger" onclick="return confirm('Are you sure you want to remove this item?');">Remove</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% else %}
+     <p>No items in the inventory to remove!</p>
+{% endif %}
+
+{% endblock %}
+
+<!--this uses Bootstrap cards to display inventory information and Jinja conditionals to check if there
+are any items placed in the inventory. It will provide the bootstrap card for each item (whether existing or newly added)
+as well as grabbing a final confirmation with an onclick Javascript line for final confirmation.!-->
