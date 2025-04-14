@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+    <h2>Add New Items</h2>
+    <form action="/add" method="POST" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="name" class="form-label">Item Name</label>
+            <input type="text" id="name" name="name" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea id="description" name="description" class="form-control" rows="2" required></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="usage" class="form-label">Usage</label>
+            <textarea id="usage" name="usage" class="form-control" rows="2" required></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="image" class="form-label">Item Image</label>
+            <input type="file" id="item-image" name="image" class="form-control" accept="image/*" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Item</button>
+    </form>
+    <script src="/static/formvalidation.js" defer></script>
+{% endblock %}
