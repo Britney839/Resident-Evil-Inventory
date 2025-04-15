@@ -1,0 +1,50 @@
+button {
+    background-color: red;
+    color: whitesmoke;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkred;
+}
+
+.container {
+    background-color: rgba(232, 71, 71, 0.34);
+}
+
+.bg-dark {
+    background-image: url('/static/images/background.jpg') !important;
+}
+
+.card-img-top {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.card-body {
+    max-width: 300px;
+    max-height: 300px;
+    text-align: center;
+}
+
+body {
+    background-color: #111;
+    color: #f8f8f8;
+    font-family: 'Arial', sans-serif;
+}
+.item-card {
+    background-color: #222;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.item-img {
+    max-width: 80px;
+    height: auto;
+    margin-right: 16px;
+}

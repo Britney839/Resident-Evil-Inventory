@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="container py-4">
+    <h1 class="mb-4 text-center">RE2 Remake Collectibles</h1>
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        {% for item in collectibles %}
+            <div class="col">
+                <div class="item-card d-flex align-items-center">
+                    <img src="{{ url_for('static', filename='images/Resident Evil 2 Item Images/' ~ item.image) }}"
+                         alt="{{ item.name }} icon" class="item-img">
+                    <div>
+                        <h5 class="mb-1">{{ item.name }}</h5>
+                        {% if item.description %}
+                            <p class="mb-0"><small>{{ item.description }}</small></p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
