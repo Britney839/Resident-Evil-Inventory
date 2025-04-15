@@ -79,7 +79,7 @@ def show_collectibles():
         {'name': 'Mixed Herb (G + R + B)', 'image': 'mixed-herb-grb.jpg', 'description': 'Fully heals, cures poison, and grants temporary defense.'},
         {'name': 'MQ-11', 'image': 'mq-11.png', 'description': 'Claires SMG. High rate of fire, good for groups.'},
         {'name': 'Muzzle Brake (Matilda)', 'image': 'muzzle-brake-matilda.jpg', 'description': 'Reduces recoil.'},
-        {'name': 'Parking Garage Keycard', 'image': 'parking-garage-keycard.jpg'},
+        {'name': 'Parking Garage Keycard', 'image': 'parking-garage-keycard.jpg', 'description': 'Opens the parking garage underneath the RPD Station.'},
         {'name': 'Red Dot Sight', 'image': 'red-dot-sight.jpg', 'description': 'Improves aim.'},
         {'name': 'Red Herb', 'image': 'red-herb.png', 'description': 'No effect alone; combine with Green for stronger healing.'},
         {'name': 'Regulator (Flamethrower)', 'image': 'regulator-flamethrower.jpg', 'description': 'Controls fuel flow.'},
