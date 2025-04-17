@@ -6,7 +6,7 @@ This is a shortly-worked on Flask project based on the Flask framework! It invol
 TO RUN THIS PROJECT:
 
 - Clone the repository in PyCharm (if you so wish) and go to run "app.py" by clicking the run button.
-- Ensure Flask is usable and installed to pull this environment and render the code.
+- Ensure Flask is usable and installed to pull this environment and render the code. Ensure flask is ALSO installed, by doing "pip install flask" and the requirements.txt "pip install -r requirements.txt" to ensure the app uses all of the packages.
 - You will be directed to a welcome page which all webpages rely on the styling for "base.html" with flashing green text that says the user has "ACCESS" to the Satchel Inventory!!
 - Each session is separated by unique user_ids, so the inventory will not be saved as it creates a new one everytime you run the website. 
 - There's a Navbar that will enable you to click on the homepage for redirection, or navigate to "Add Items" or "Inventory" (add will direct you to a form, inventory will allow you to view what items you currently have!)
