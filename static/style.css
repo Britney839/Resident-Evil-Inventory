@@ -10,26 +10,75 @@ button:hover {
     background-color: darkred;
 }
 
-.container {
-    background-color: rgba(232, 71, 71, 0.34);
+.btn {
+    background-color: #3b0a0a;
+    color: #e0e0e0;
+    border: 2px solid #a00;
+    font-family: 'Orbitron', 'Courier New', monospace;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    border-radius: 4px;
 }
 
-.bg-dark {
-    background-image: url('/static/images/background.jpg') !important;
+.btn:hover {
+     background-color: #5c0d0d;
+     color: #fff;
+     box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+     transform: scale(1.05);
+}
+
+.btn:active {
+     transform: scale(0.98);
+     box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+}
+.container {
+    background-color: rgba(169, 169, 169, 0.37);
 }
 
 .card-img-top {
-    max-width: 200px;
-    max-height: 200px;
+    max-width: 300px;
+    max-height: 300px;
 }
 
 .card-body {
     max-width: 300px;
     max-height: 300px;
     text-align: center;
+    background: linear-gradient(145deg, #1a1a1a, #111);
+    border: 2px solid #b30000;
+    border-radius: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    font-family: 'Share Tech Mono', monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
 }
 
+.card-body:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+}
+
+.card-text {
+    word-wrap: break-word;
+    overflow-y: auto;
+    max-height: 100px;
+    padding: 0 8px;
+}
+
+
 body {
+    background-image: url('/static/images/ba.jpeg') !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
     background-color: #111;
     color: #f8f8f8;
     font-family: 'Arial', sans-serif;
@@ -41,6 +90,43 @@ body {
     padding: 16px;
     margin-bottom: 16px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.disabled-button {
+    background-color: #555;
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+.add_button {
+    background-color: #3b0a0a;
+    color: #e0e0e0;
+    border: 2px solid #a00;
+    font-family: 'Orbitron', 'Courier New', monospace;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.add_button:hover {
+     background-color: #5c0d0d;
+     color: #fff;
+     box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+     transform: scale(1.05);
+}
+
+.add_button:active {
+     transform: scale(0.98);
+     box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+}
+
+.add_button:disabled {
+    transform: none;
 }
 
 .item-img {

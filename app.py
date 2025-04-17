@@ -11,8 +11,6 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1000 * 1000 #this provides app configuration for the maximum file size the user can upload.
 app.config['SESSION_PERMANENT'] = False
 app.config['SESSION_TYPE'] = "filesystem"
-
-
 file_save_location = "static/images"
 
 
@@ -93,7 +91,8 @@ def show_collectibles():
         {'name': 'W-870', 'image': 'w-870.png', 'description': 'Leons shotgun. Effective at close range.'},
         {'name': 'Weapons Locker Keycard', 'image': 'weapons-locker-key-card.png', 'description': 'Opens gun locker (W-870 or GM-79).'},
         {'name': 'Wooden Boards', 'image': 'wooden-boards.png', 'description': 'Block windows to prevent zombie entry.'}]
-    return render_template("list.html", collectibles=collectibles)
+    inventory = session.get('inventory', [])
+    return render_template("list.html", collectibles=collectibles, inventory=inventory)
 
 @app.route('/add', methods=['GET', 'POST'])
 def add_item():
@@ -131,6 +130,32 @@ def add_item():
         else:
             flash('Invalid image file.')
             return redirect(request.url)
+
+@app.route('/add_to_inventory', methods=['POST'])
+def add_to_inventory():
+    item_name = request.form.get('name')
+    item_description = request.form.get('description')
+    item_image = request.form.get('image')
+
+    if not item_name or not item_description or not item_image:
+        flash('Invalid item data.')
+        return redirect(url_for('show_collectibles'))
+
+    item = {
+        'id': str(uuid.uuid4()),
+        'name': item_name,
+        'description': item_description,
+        'image': item_image,
+        'is_collectible': True
+    }
+
+    inventory = session.get('inventory', [])
+    inventory.append(item)
+    session['inventory'] = inventory
+    session.modified = True
+
+    return redirect(url_for('inventory'))
+
 
 @app.route('/remove/<string:item_id>')
 def remove_item(item_id):
