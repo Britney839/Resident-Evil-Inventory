@@ -10,6 +10,7 @@ TO RUN THIS PROJECT:
 - You will be directed to a welcome page which all webpages rely on the styling for "base.html"
 - There's a Navbar that will enable you to click on the homepage for redirection, or navigate to "Add Items" or "Inventory" (add will direct you to a form, inventory will allow you to view what items you currently have!)
 - You can remove items in the inventory as you add them, as there will be an individual button alongside each to interpret which items you are singularly removing.
+- Additionally, for adding items that a user new to the Resident Evil franchise, they can view under the category "See Collectibles List" to see what items within the games they COULD add.
 =======
 
 
